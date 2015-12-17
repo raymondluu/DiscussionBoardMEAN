@@ -1,0 +1,17 @@
+<html ng-app='myDiscussionApp'>
+	<head>
+		<title></title><!-- Make title change for each page -->
+		<link rel='stylesheet' type='text/css' href='style/style.css'>
+		<script src='javascript/angular.min.js'></script>
+		<script src="javascript/angular-route.min.js"></script>
+		<script type='text/javascript' src='javascript/app.js'></script>
+		<script type='text/javascript' src='javascript/factories/UserFactory.js'></script>
+		<script type='text/javascript' src='javascript/factories/TopicsFactory.js'></script>
+		<script type='text/javascript' src='javascript/controllers/LoginController.js'></script>
+		<script type='text/javascript' src='javascript/controllers/DashboardController.js'></script>
+		<script type='text/javascript' src='javascript/controllers/TopicController.js'></script>
+	</head>
+	<body>
+		<div ng-view=''></div>
+	</body>
+</html>

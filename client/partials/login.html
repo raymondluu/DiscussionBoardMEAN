@@ -1,0 +1,7 @@
+<div>
+	<p>Hello!</p>
+	<p>Please enter your name to join and share your ideas</p>
+	<p ng-if='errors.message'><b>{{errors.message}}</b></p>
+	<input type='text' ng-model='input.userName'></input>
+	<button ng-click='loginUser()'>Enter</button>
+</div>

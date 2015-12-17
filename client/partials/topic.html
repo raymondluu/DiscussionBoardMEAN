@@ -1,0 +1,17 @@
+<!-- Add Dashboard and Logout links -->
+<h1><a href='#/'>{{topic.user.userName}}</a> posted a topic:</h1><!-- Should link to user profile -->
+<p class='indent'><b>{{topic.topicName}}</b></p>
+<p class='indent'>Description: {{topic.topicDescription}}</p>
+<h1>Post your answer here...</h1>
+<textarea class='post' ng-model='input.post'></textarea>
+<button ng-click='addPost()'>Post</button>
+<div ng-repeat='post in topic.posts'><!-- Should be arranged from newest to oldest -->
+	<hr>
+	<p><a href='#/'>{{post.user.userName}}</a>: {{post.post}}</p><!-- Should link to user profile -->
+	<!-- Should include upvote downvote feature here-->
+	<div ng-repeat='comment in post.comments'><!-- Should be arranged from newest to oldest -->
+		<p class='indent'><a href='#/'>{{comment.user.userName}}</a>:{{comment.comment}}</p><!-- Should link to user profile -->
+	</div>
+	<textarea class='post' ng-model='input.comment'></textarea>
+	<button ng-click='addComment($index)'>Comment</button>
+</div>

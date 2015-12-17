@@ -1,0 +1,23 @@
+table{
+	border-collapse: collapse;
+}
+th, td{
+	border: 1px solid black;
+	text-align: center;
+}
+a{
+	margin-right: 10px;
+}
+.description{
+	width: 150px;
+	height: 200px;
+	resize: none;
+}
+.indent{
+	margin-left: 50px;
+}
+.post{
+	width: 600px;
+	height: 100px;
+	resize: none;
+}

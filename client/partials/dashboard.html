@@ -1,0 +1,39 @@
+<h1>Welcome {{user.userName}}!</h1>
+<input type='text' ng-model='customerFilter' placeholder='search topic...'></input>
+<button ng-click=''>Search</button><!-- filter on button click -->
+<table>
+	<thead>
+		<tr>
+			<th>Category</th>
+			<th>Topic</th>
+			<th>User Name</th>
+			<th>Posts</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat='topic in topics'><!-- Should be arranged from newest to oldest -->
+			<td>{{topic.topicCategory}}</td>
+			<td><a href='#/topic/{{$index}}'>{{topic.topicName}}</a></td>
+			<td><a href='#/'>{{topic.user.userName}}</a></td><!-- Should link to user profile -->
+			<td>{{topic.posts.length}}</td>
+		</tr>
+	</tbody>
+</table>
+<h4>Add a new topic</h4>
+<div>
+	<p>
+		<span>Topic:</span>
+		<input type='text' ng-model='input.topicName'></input>
+	</p>
+	<p>
+		<span>Description:</span>
+		<textarea class='description' ng-model='input.topicDescription'></textarea>
+	</p>
+	<p>
+		<span>Category:</span>
+		<select ng-model='input.topicCategory'>
+			<option ng-repeat="category in categories">{{category}}</option>
+		</select>
+	</p>
+	<button ng-click='addTopic()'>Submit</button>
+</div>

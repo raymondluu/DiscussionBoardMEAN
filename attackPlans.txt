@@ -1,0 +1,66 @@
+Back-end
+
+Models:
+Users -
+Name, [Topics], [Answers], [Comments]
+
+Topics -
+TopicName, Description, Category, [Answers], [Comments], (Assoiciation with Users)
+
+Answers - 
+AnswerText, (Association with Users and Topics)
+
+Comments - 
+CommentText, (Association with Users, Topics)
+
+Categories -
+Category
+--------
+Front-end
+
+Factories:
+UserFactory
+TopicsFactory
+AnswersFactory
+CommentsFactory
+
+Controllers:
+LoginController(inject UserFactory)
+DashboardController(inject UserFactory, TopicsFactory)
+TopicController(inject UserFactory, TopicsFactory, AnswersFactory, CommentsFactory)
+UserController(inject UserFactory)
+
+---------------------------------------------------------------
+What I still need:
+Back-end
+
+Models:
+Users -
+[Topics], [Answers], [Comments]
+
+Topics -
+TopicName, Description, Category, [Answers], [Comments], (Assoiciation with Users)
+
+Answers - 
+AnswerText, (Association with Users and Topics)
+
+Comments - 
+CommentText, (Association with Users, Topics)
+
+
+
+
+
+Front-end
+
+Factories:
+
+TopicsFactory
+AnswersFactory
+CommentsFactory
+
+Controllers:
+
+DashboardController(inject TopicsFactory)
+TopicController(inject TopicsFactory, AnswersFactory, CommentsFactory)
+UserController(inject UserFactory)
